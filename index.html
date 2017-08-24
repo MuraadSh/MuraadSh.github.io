@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Murad Shahmammadli</title>
+		<link rel="stylesheet" href="CSS/index.css">
+		<script src="JS/jquery.min.js"></script>
+		<script src="JS/vue.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="main_part" v-if="showButtons">
+				<span class="name">Murad Shahmammadli</span>
+				<ul class="buttons">
+					<li class="buttons_li" @click="button_clicked">About me | </li>
+					<li class="buttons_li" @click="button_clicked">Projects | </li>
+					<li class="buttons_li" @click="button_clicked">Contact  | </li>
+					<li class="buttons_li" @click="button_clicked">Links</li>
+				</ul>
+			</div>
+			<div class="about_me divs " :class="{hideAboutMe: hideEl}">
+				<div class="go_back" title="Go Back" @click="hide">
+					<div class="top_line_go_back_ab"></div>
+					<div class="bottom_line_go_back_ab"></div>
+				</div>
+				<p style="display:inline;">Hey there!</p>
+				<p>Thanks for visiting my website. </p>
+				<p>My name is Murad and i'm from Azerbaijan. I was born into this dingy word 2003 on 20th of march.<a href="http://centill.com/" target="_blank">Centill</a> is my social networking website and i'd be delighted if you check it out and tell me your opinion.</p>
+				Things i like:
+				<ul class="things_i_like">
+					<li>Rap/Hip-hop</li>
+					<li>Programming</li>
+					<li>Game Of Thrones</li>
+					<li>Theories</li>
+					<li>New York</li>
+					<li>Elon Musk</li>
+					<li>Mark Zuckerberg</li>
+					<li>Kanye West</li>
+					<li>Kendrick Lamar</li>
+					<li>Eminem</li>
+					<li>Lana Del Rey</li>
+					<li>Arya Stark</li>
+					<li>Technolgy</li>
+					<li>Astronomy</li>
+					<li>YouTube</li>
+					<li>Pewdiepie</li>
+				</ul>
+				Things i don't like:
+				<ul class="things_i_dont_like">
+					<li>Pop</li>
+					<li>Chemistry</li>
+					<li>Nationalism</li>
+					<li>Tartuffes</li>
+					<li>Gullible people</li>
+					<li>Most people in general</li>
+					<li>Taylor Swift</li>
+					<li>Close-minded people</li>
+					<li>Meaningless traditions</li>
+					<li>Superstitious people</li>
+					<li>Racist people</li>
+				</ul>
+			</div>
+			<div class="Projects divs"   :class="{hideProj: hideEl,showDiv: !hideEl}">
+				<span class="go_back_span" @click="hide">Back</span>
+				<span class="projects_span">Projects</span><br>
+				<div class="project_box" v-for="projects in projects">
+					<div class="img_wrapper">
+						<img :src="projects.image" class="project_image">		
+					</div>
+					<span class="proj_title">{{projects.title}}</span>
+					<span class="about_the_project">{{projects.description}}</span>
+					<a :href="projects.Link" v-if="!projects.gitHub" target="_blank" class="project_link">Link</a>
+					<a :href="projects.Link" v-if="projects.gitHub" target="_blank" class="project_link">GitHub</a>
+				</div>
+			</div>
+			<div class="Contact divs"  :class="{hideProj: hideEl,showDiv: !hideEl}">
+				<span class="go_back_span cont_back" @click="hide">Back</span><br>
+				<span class="contact_span">Contact</span><br>
+				<a href="mailto:centill.com@mail.ru" class="email_span">centill.com@mail.ru</a><br>
+				<a href="mailto:muradshahmamadli@gmail.com" class="email_span">muradshahmamadli@gmail.com</a><br>
+			</div>
+			<div class="Links divs" :class="{hideProj: hideEl,showDiv: !hideEl}">
+				<span class="go_back_span links_back" @click="hide">Back</span>
+				<span class="link_span">Links</span><br>
+				<ul class="Links_ul">
+					<li><a href="https://www.quora.com/profile/Murad-Shah-6">Quora</a></li>
+					<li><a href="https://github.com/MuraadSh">GitHub</a></li>
+					<li><a href="http://centill.com/users/muradsh">Centill</a></li>
+					<li><a href="https://www.instagram.com/sh__murad/">Instagram</a></li>
+					<li><a href="https://www.hackerrank.com/MuradSh">Hackerrank</a></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<script src="JS/index.js"></script>
+	</body>
+</html>
