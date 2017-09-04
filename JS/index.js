@@ -40,8 +40,7 @@ const Projects = new Vue({
 	el: ".Projects",
 	data: {
 		projects: [
-			new ProjectsC("Images/C.png","Centill","Centill is my biggest project,it's a social networking website i started working on in 2015.Created using HTML,CSS,Javascript/Jquery,PHP and Mysql",false,"http://centill.com/"),
-			new ProjectsC("Images/Planet.png","UIS","UIS or United Intergalactic Species is a project i created for fun.It's mostly about a database of various species,planets,galaxies,black holes around our vast universe.Created using HTML,CSS,Javascript/Jquery/Vue.js,PHP and Mysql",true,"https://github.com/MuraadSh/UIS"),
+			new ProjectsC("Images/C.png","Centill","Centill is my biggest project,it's a social networking website i started working on in 2015.Created using HTML,CSS,Javascript/Jquery,PHP and Mysql",false,"http://centill.com/")
 		],
 		hideEl: true,
 	},
