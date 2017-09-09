@@ -41,6 +41,7 @@ const Projects = new Vue({
 	data: {
 		projects: [
 			new ProjectsC("Images/C.png","Centill","Centill is my biggest project,it's a social networking website i started working on in 2015.Created using HTML,CSS,Javascript/Jquery,PHP and Mysql",false,"http://centill.com/")
+			new ProjectsC("Images/KnowledgeBase.png","KnowledgeBase","KnowledgeBase is a project that helps me to memorize information i learn throughout the day.I read an article then i write my shortened version of it and add it to database.Created using HTML,CSS,Javascript,PHP and Mysql",true,"https://github.com/MuraadSh/KnowledgeBase")
 		],
 		hideEl: true,
 	},
